@@ -37,10 +37,16 @@ Each log line shows which arm was picked, the reward it earned, and the running 
 ## Install
 
 ```sh
+dsh plugin --profile web add github:siruignaw-sys/dsh-tool-bandit-search
+```
+
+For local development against a cloned/edited copy instead:
+
+```sh
 dsh plugin --profile web add link:/absolute/path/to/dsh-tool-bandit-search
 ```
 
-Or clone this repo and point the profile at it directly. Restart the Web UI (or start a new session) after installing — the plugin also adds a system-prompt instruction steering the model to prefer `search` over the built-in `web_search` tool, which only applies to sessions started after the plugin loads.
+Either way, restart the Web UI (a fresh `pnpm dsh web` / `dsh web`, not just a new chat) after installing — bundle installs only take effect on the next boot, and the plugin's system-prompt instruction steering the model toward `search` over the built-in `web_search` tool only applies to sessions started after that.
 
 ## Requirements
 
