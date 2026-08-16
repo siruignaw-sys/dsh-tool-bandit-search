@@ -1,0 +1,14 @@
+{
+  "name": "dsh-tool-bandit-search",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A search tool for DeepSeek Harness that learns to pick between quick and thorough search strategies using a contextual bandit (Thompson sampling).",
+  "main": "src/bandit-search.ts",
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    }
+  },
+  "keywords": ["dsh-plugin"]
+}
