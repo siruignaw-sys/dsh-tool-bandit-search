@@ -5,6 +5,10 @@
   "description": "A search tool for DeepSeek Harness that learns to pick between quick and thorough search strategies using a contextual bandit (Thompson sampling).",
   "main": "src/bandit-search.ts",
   "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/cordis": "*"
+  },
   "dsh": {
     "bundle": {
       "patch": "cordis.patch.yml"
